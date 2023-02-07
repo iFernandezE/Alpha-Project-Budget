@@ -1,4 +1,4 @@
-namespace BudgetProjectTests
+namespace BudgetProjectTests.ProgramTests
 {
     [TestClass]
     public class UnitTest1
