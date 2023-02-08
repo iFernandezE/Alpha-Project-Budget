@@ -4,7 +4,7 @@ using BudgetProject.ProjectUI;
 
 internal class MainProgram
 {
-    private static void Main(string[] args)
+    public static void Main(string[] args)
     {
 
         MainUI mainMenu = new MainUI();
