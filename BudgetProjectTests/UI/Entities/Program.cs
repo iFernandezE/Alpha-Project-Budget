@@ -8,17 +8,9 @@ namespace BudgetProject.Entities
 {
     public class Program
     {
-        public string Code;
-        public string Name;
-        public DateTime StartDate;
-        public DateTime EndDate;
-
-        public Program(string code, string name, DateTime startDate, DateTime endDate)
-        {
-            this.Code= code;
-            this.Name= name;
-            this.StartDate = startDate;
-            this.EndDate = endDate;
-        }
+        public CodeProgram Code { get; set; }
+        public string Name { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
     }
 }
