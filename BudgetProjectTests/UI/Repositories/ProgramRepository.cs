@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using BudgetProject.Entities;
+using System.Collections.ObjectModel;
 
 namespace BudgetProject.Repositories
 {

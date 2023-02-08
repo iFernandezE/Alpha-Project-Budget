@@ -1,4 +1,5 @@
-﻿using BudgetProject.Repositories;
+﻿using BudgetProject.Entities;
+using BudgetProject.Repositories;
 using BudgetProject.Utils;
 using System;
 
