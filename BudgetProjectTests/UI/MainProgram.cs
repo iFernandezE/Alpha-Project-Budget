@@ -15,11 +15,30 @@ internal class MainProgram
         //    ProgramUI myProgramUI = new ProgramUI(myProgramController);
         //}
 
-        // See https://aka.ms/new-console-template for more information
-
-        Console.WriteLine("Hello, World!");
         MainUI mainMenu = new MainUI();
-        mainMenu.Show();
+        ProgramUI programUI= new ProgramUI();
+        int option = mainMenu.Show();
+
+        while (true)
+        {            
+            try
+            {
+                switch (option)
+                {
+                    case 0:
+                        return;
+                    case 1:
+                        programUI.RequestProgramData();
+                        break;
+                    default:
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
 
     }
 }

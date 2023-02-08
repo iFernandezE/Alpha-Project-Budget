@@ -9,51 +9,15 @@ namespace BudgetProject.ProjectUI
 {
     public class MainUI
     {
-        private ControllerProgram controllerProgram;
-        private ProgramUI programUI;
-        public MainUI() 
+        internal int Show()
         {
-            controllerProgram = new ControllerProgram();
-            programUI = new ProgramUI();
-        
-        }
-        internal void Show()
-        {
-            while(true)
-            {
-                ShowMainMenu();
-                try
-                {
-                    int userInput = ReadInt();
-                    switch (userInput)
-                    {
-                        case 0:
-                            return;
-                        case 1:
-                            programUI.DisplayRegisterProgram();
-                            break;
-                        default:
-                            break;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-            }
-        }
-        private void ShowMainMenu()
-        {
-            Console.WriteLine("----------Choose an Option---------------");
-            Console.WriteLine("1: Register Program.");
-            Console.WriteLine("-----------------------------------------");
-            Console.WriteLine("0: Exit.");
-            Console.WriteLine("-----------------------------------------");
-        }
-        private int ReadInt()
-        {
-            string option = Console.ReadLine();
-            return int.Parse(option);
+            Console.WriteLine("--- Alpha Project ---");
+            Console.WriteLine("Choose an option:");
+            Console.WriteLine("1. Register program");
+            Console.WriteLine("2. ");
+            Console.WriteLine("3. ");
+            Console.WriteLine("4. ");
+            return Convert.ToInt32(Console.ReadLine());            
         }
 
     }

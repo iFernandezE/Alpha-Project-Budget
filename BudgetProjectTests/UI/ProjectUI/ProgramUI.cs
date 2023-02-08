@@ -9,20 +9,19 @@ namespace BudgetProject.ProjectUI
 {
     internal class ProgramUI
     {
-        internal void DisplayRegisterProgram()
+        internal void RequestProgramData()
         {
-            Console.WriteLine("Enter the Code:");
+            Console.WriteLine("-- Register Program --");
+            Console.Write("Introduce the program code: ");
             string code = Console.ReadLine();
-            Console.WriteLine("Enter the name:");
+            Console.Write("Introduce the program name: ");
             string name = Console.ReadLine();
-            Console.WriteLine("Ingrese the Date start");
+            Console.Write("Introduce the program start date: ");
             DateTime startProgram= DateTime.Parse(Console.ReadLine());
             ValidatorProgram.IsValidProgramStartDate(startProgram);
-            Console.WriteLine("Ingrese the date end ");
+            Console.Write("Introduce the program end date: ");
             DateTime endProgram = DateTime.Parse(Console.ReadLine());
             ValidatorProgram.IsValidProgramStartDate(endProgram);
-
-
         }
     }
 }

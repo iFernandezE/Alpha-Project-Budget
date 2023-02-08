@@ -12,5 +12,13 @@ namespace BudgetProject.Entities
         public string Name { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
+
+        public Program(CodeProgram code, string name, DateTime startDate, DateTime endDate)
+        {
+            this.Code= code;
+            this.Name= name;
+            this.StartDate= startDate;
+            this.EndDate= endDate;
+        }
     }
 }
