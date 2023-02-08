@@ -5,13 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BudgetProject.Utils
+namespace BudgetProject.Utilitaries
 {
-    internal class ProgramValidate
+    internal class ProgramValidator
     {
         private Program program;
 
-        public ProgramValidate(Program program)
+        public ProgramValidator(Program program)
         {
             this.program = program;
         }
@@ -20,5 +20,6 @@ namespace BudgetProject.Utils
         {
             return 1;
         }
+
     }
 }

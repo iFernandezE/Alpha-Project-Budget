@@ -6,29 +6,25 @@ internal class MainProgram
 {
     private static void Main(string[] args)
     {
-        //MainUI myMainMenu = new MainUI();
-        //int option = myMainMenu.ChooseOption();
-
-        //if (option == 1)
-        //{
-        //    ProgramController myProgramController;
-        //    ProgramUI myProgramUI = new ProgramUI(myProgramController);
-        //}
 
         MainUI mainMenu = new MainUI();
-        ProgramUI programUI= new ProgramUI();
-        int option = mainMenu.Show();
+        ProgramUI programUI = new ProgramUI();
+        ProgramController programController = new ProgramController();
+        int option;
+        bool uiState = true;
 
-        while (true)
-        {            
+        while (uiState)
+        {
             try
             {
+                option = mainMenu.Show();
                 switch (option)
                 {
-                    case 0:
-                        return;
                     case 1:
-                        programUI.RequestProgramData();
+                        programUI.RequestProgramData(programController);
+                        break;
+                    case 5: 
+                        uiState = false;
                         break;
                     default:
                         break;

@@ -1,29 +1,23 @@
 ﻿using BudgetProject.Entities;
 using BudgetProject.Repositories;
-using BudgetProject.Utils;
+using BudgetProject.Utilitaries;
 using System;
 
 namespace BudgetProject.Controllers
 {
     internal class ProgramController
     {
-        public Program program;
-
-        public ProgramController(Program program)
+        private ProgramRepository repository = new ProgramRepository();
+        public int RegisterProgram(Program program)
         {
-            this.program = program;
-        }
+            ProgramValidator myProgramValidate = new ProgramValidator(program);
 
-        public int RegisterProgram()
-        {
-            ProgramValidate myProgramValidate = new ProgramValidate(program);
             int resultCode = myProgramValidate.ValidateData();
             if (resultCode == 1)
             {
-                ProgramRepository myProgramRepository = new ProgramRepository();
-                myProgramRepository.Add(program);
+                repository.Add(program);
             }
-            return 1;
+            return resultCode;
         }
 
     }

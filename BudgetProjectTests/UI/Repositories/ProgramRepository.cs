@@ -6,7 +6,7 @@ namespace BudgetProject.Repositories
 
     internal class ProgramRepository
     {
-        private static ObservableCollection<Program> collection;
+        public List<Program> ProgramList = new List<Program>();
 
         public ProgramRepository()
         {
@@ -14,12 +14,12 @@ namespace BudgetProject.Repositories
 
         public IEnumerable<Program> GetAll()
         {
-            return collection;
+            return ProgramList;
         }
 
         public void Add(Program program)
         {
-            collection.Add(program);
+            ProgramList.Add(program);
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Text.RegularExpressions;
 
 namespace BudgetProject.Utilitaries
 {
-    public static class ValidatorProgram
+    public static class ProgramUIValidator
     {
         public static bool IsValidProgramStartDate(DateTime start)
         {
