@@ -1,5 +1,6 @@
 ﻿using BudgetProject.Controllers;
 using BudgetProject.Entities;
+using BudgetProject.ProjectUI;
 
 internal class MainProgram
 {
@@ -13,6 +14,12 @@ internal class MainProgram
         //    ProgramController myProgramController;
         //    ProgramUI myProgramUI = new ProgramUI(myProgramController);
         //}
+
+        // See https://aka.ms/new-console-template for more information
+
+        Console.WriteLine("Hello, World!");
+        MainUI mainMenu = new MainUI();
+        mainMenu.Show();
 
     }
 }
