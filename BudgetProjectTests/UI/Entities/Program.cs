@@ -1,7 +1,24 @@
-﻿internal class Program
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BudgetProject.Entities
 {
-    private static void Main(string[] args)
+    public class Program
     {
-        Console.WriteLine("Hello, World!");
+        public string Code;
+        public string Name;
+        public DateTime StartDate;
+        public DateTime EndDate;
+
+        public Program(string code, string name, DateTime startDate, DateTime endDate)
+        {
+            this.Code= code;
+            this.Name= name;
+            this.StartDate = startDate;
+            this.EndDate = endDate;
+        }
     }
 }
