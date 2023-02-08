@@ -4,7 +4,7 @@ using System.Collections.ObjectModel;
 namespace BudgetProject.Repositories
 {
 
-    internal class ProgramRepository
+    public class ProgramRepository
     {
         public List<Program> ProgramList = new List<Program>();
 

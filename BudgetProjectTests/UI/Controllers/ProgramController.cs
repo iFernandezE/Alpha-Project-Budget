@@ -5,9 +5,9 @@ using System;
 
 namespace BudgetProject.Controllers
 {
-    internal class ProgramController
+    public class ProgramController
     {
-        private ProgramRepository repository = new ProgramRepository();
+        public ProgramRepository repository = new ProgramRepository();
         public int RegisterProgram(Program program)
         {
             ProgramValidator myProgramValidate = new ProgramValidator(program);
